@@ -2,23 +2,44 @@
   margin: 0;
   padding: 0;
 }
-.box1 {
-  background-color: red;
-  border: 2px solid #000000;
-  margin: 0 auto; /* to make the box in center of the page*/
-  padding: 2rem 3rem 2rem 3rem;
-  height: 10rem;
-  width: 10rem;
-  text-align: center;
-  box-sizing: content-box;
+body {
+  display: grid;
+  grid-template-rows: 100px 1fr 200px;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
 }
-.box2 {
-  background-color: red;
-  border: 2px solid #000000;
-  margin: 10px;
-  padding: 2rem 3rem 2rem 3rem;
-  height: 10rem;
-  width: 10rem;
+nav ul {
+  display: flex;
+}
+a {
+  text-decoration: none;
+  padding: 1rem;
+  color: black;
+}
+header {
+  grid-area: header;
+  background-color: aqua;
+}
+
+main {
+  grid-area: main;
+  background-color: white;
+}
+.img {
+  display: flex;
+}
+img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  padding: 10px;
+  aspect-ratio: 1/1;
+}
+
+footer {
+  grid-area: footer;
+  background-color: lightgray;
   text-align: center;
-  box-sizing: border-box;
 }
