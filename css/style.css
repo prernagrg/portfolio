@@ -9,6 +9,7 @@ body {
     "header"
     "main"
     "footer";
+  height: 100vh;
 }
 nav ul {
   display: flex;
@@ -20,16 +21,14 @@ a {
 }
 header {
   grid-area: header;
-  background-color: aqua;
+  background-color: beige;
 }
 
 main {
   grid-area: main;
   background-color: white;
 }
-.img {
-  display: flex;
-}
+
 img {
   height: 200px;
   width: 200px;
@@ -39,7 +38,20 @@ img {
 }
 
 footer {
+  color: white;
+  padding: 10px;
   grid-area: footer;
-  background-color: lightgray;
+  background-color: #797575;
   text-align: center;
+  align-items: end;
+}
+@media (min-width: 768px) {
+  .img {
+    display: flex;
+  }
+}
+@media (max-width: 768px) {
+  .img p {
+    color: gray;
+  }
 }
