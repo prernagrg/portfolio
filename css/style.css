@@ -128,3 +128,91 @@ footer {
   color: #a6a3a3;
   border-top: 1px solid #ddd;
 }
+
+/* ===============================
+   Responsive Design
+   =============================== */
+
+/* Tablets (max-width: 992px) */
+@media (max-width: 992px) {
+  main {
+    width: 90%;
+  }
+
+  header h1 {
+    font-size: 1.7rem;
+  }
+
+  nav ul {
+    gap: 18px;
+  }
+
+  section h1,
+  section h2 {
+    font-size: 1.6rem;
+  }
+
+  .img img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  main {
+    width: 95%;
+    margin: 25px auto;
+  }
+
+  .img {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .img img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .img p {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  section h1,
+  section h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
+  }
+
+  section h1,
+  section h2 {
+    font-size: 1.25rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 15px;
+  }
+}
