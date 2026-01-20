@@ -21,7 +21,12 @@
     <header>
       <div class="header-container">
         <div class="logo">Prerana</div>
-        <nav>
+        <button class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav-menu" id="navMenu">
           <ul type="none">
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -175,5 +180,22 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navMenu = document.getElementById("navMenu");
+      const navLinks = navMenu.querySelectorAll("a");
+
+      hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        hamburger.classList.toggle("active");
+      });
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          navMenu.classList.remove("active");
+          hamburger.classList.remove("active");
+        });
+      });
+    </script>
   </body>
 </html>
